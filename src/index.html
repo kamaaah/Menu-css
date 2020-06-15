@@ -1,13 +1,33 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>MenuCss</title>
+  <title>The Rosa</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+  <link href="styles.css">
+  <script src="assets/js/main.js"></script>
+
 </head>
+
 <body>
   <app-root></app-root>
+  <script language=javascript>
+    const selectElement = (function (element) {
+      return document.querySelector(element);
+    });
+
+    let menuToggler = selectElement('.nav-menu-toggle');
+    let body = selectElement('body');
+
+    menuToggler.addEventListener('click', function () {
+    body.classList.toggle('body');
+    });
+  </script>
+  <script src="https://unpkg.com/scrollreveal"></script>
 </body>
+
 </html>
